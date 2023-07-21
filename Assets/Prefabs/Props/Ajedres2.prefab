@@ -1264,6 +1264,7 @@ GameObject:
   - component: {fileID: 3235646055157056670}
   - component: {fileID: 3235646055157056665}
   - component: {fileID: 3235646055157056664}
+  - component: {fileID: 8336295264924406124}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1370,6 +1371,29 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &8336295264924406124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3235646055157056667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc6f50389fcff145b5716038fa3e712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectObject: {fileID: 0}
+  cam: {fileID: 3235646055157056670}
+  mouse: {x: 0, y: 0, z: 0}
+  elevacion: 0
+  TimeActive: 0
+  FinalTime: 1.5
+  distance: 10
+  pedestal1: {fileID: 3235646056058450433}
+  pedestal2: {fileID: 3235646056163918043}
+  pedestal3: {fileID: 3235646054872348027}
+  PuzzleResuelto: 0
 --- !u!1 &3235646055162511429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,7 +3233,6 @@ GameObject:
   - component: {fileID: 5253153094951315370}
   - component: {fileID: 4876591650553560341}
   - component: {fileID: 4876591650553560340}
-  - component: {fileID: 4876591650553560343}
   - component: {fileID: 4876591650553560342}
   - component: {fileID: 4876591650553560337}
   m_Layer: 6
@@ -3274,29 +3297,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &4876591650553560343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4876591650553560336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cc6f50389fcff145b5716038fa3e712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SelectObject: {fileID: 0}
-  cam: {fileID: 3235646055157056670}
-  mouse: {x: 0, y: 0, z: 0}
-  elevacion: 0
-  TimeActive: 0
-  FinalTime: 1.5
-  distance: 10
-  pedestal1: {fileID: 3235646056058450433}
-  pedestal2: {fileID: 3235646056163918043}
-  pedestal3: {fileID: 3235646054872348027}
-  PuzzleResuelto: 0
 --- !u!114 &4876591650553560342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3313,6 +3313,10 @@ MonoBehaviour:
   _inventory: {fileID: 0}
   flashlightPlayer: {fileID: 0}
   CanvasInteractive: {fileID: 4222651864346213311}
+  Pieces: {fileID: 11400000, guid: 81f8290fb27a130439c1a4c5d6dcb1fc, type: 2}
+  PiezaCaballo: {fileID: 8857198773668023775}
+  PiezaAlfil: {fileID: 3235646055162511429}
+  PiezaReina: {fileID: 8283789185257398364}
   lockType: 0
   camaraChess: {fileID: 3235646055157056667}
 --- !u!114 &4876591650553560337
@@ -3598,7 +3602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8967102577389353961
 Transform:
   m_ObjectHideFlags: 0
@@ -3809,7 +3813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4989931204580662925
 Transform:
   m_ObjectHideFlags: 0
@@ -4025,6 +4029,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 32.787
       objectReference: {fileID: 0}
+    - target: {fileID: 9081626435258377280, guid: cb0954da127ecae4dbfce96683fb623c,
+        type: 3}
+      propertyPath: Key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081626435258377280, guid: cb0954da127ecae4dbfce96683fb623c,
+        type: 3}
+      propertyPath: llaves
+      value: 
+      objectReference: {fileID: 11400000, guid: 81f8290fb27a130439c1a4c5d6dcb1fc,
+        type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9051988334127390655, guid: cb0954da127ecae4dbfce96683fb623c,

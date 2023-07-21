@@ -13,4 +13,6 @@ public class SceneManager01 : ScriptableObject
     public bool PiezaAlfil;
     public bool PiezaReina;
     public bool PiezaCaballo;
+
+    public bool GeneratorOn = true;
 }
