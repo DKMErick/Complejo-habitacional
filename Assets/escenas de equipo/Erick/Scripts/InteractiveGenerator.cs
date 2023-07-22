@@ -15,6 +15,9 @@ public class InteractiveGenerator : MonoBehaviour
     public AudioSource Off;
 
     public AudioSource Loop;
+    sonidoGen _sonidoGen;
+
+    public GameObject LoopSound;
 
     public bool TimeWait;
     public float Timer;
@@ -27,6 +30,7 @@ public class InteractiveGenerator : MonoBehaviour
     private void Awake()
     {
         _AssetInput = FindObjectOfType<AssetInput>();
+        _sonidoGen = GetComponentInChildren<sonidoGen>();
     }
 
     private void Update()
@@ -41,6 +45,15 @@ public class InteractiveGenerator : MonoBehaviour
             TimeWait = false;
             Timer = 0;
             Loop.Play();
+        }
+
+        if (lockType == ObjetType.GeneratorOn)
+        {
+            LoopSound.SetActive(true);
+        }
+        else if(lockType == ObjetType.GeneratorOff)
+        {
+            LoopSound.SetActive(false);
         }
     }
     public void Interact()

@@ -28,7 +28,9 @@ public class InteractiveDoor : MonoBehaviour
     public AudioSource SonidoCerrada;
     public AudioSource SonidoCerrandoPuerta;
     public AudioSource SonidoAbierta;
-    public AudioSource SonidoBloqueada; 
+    public AudioSource SonidoBloqueada;
+
+
 
     [Header("Cambio de escena")]
     public string nombreDeEscena;
@@ -42,7 +44,6 @@ public class InteractiveDoor : MonoBehaviour
     {
         tmpPuerta = AsignarComponentes.instance.textoPuerta.GetComponent<TMP_Text>();
         tmpPuertaGO = AsignarComponentes.instance.textoPuerta;
-        
     }
     public void Interact()
     {
@@ -70,7 +71,7 @@ public class InteractiveDoor : MonoBehaviour
                 sonidoFinal = SonidoCerrada;
                 if (tieneTexto)
                 {
-                    
+                    textoPuerta = "Necesita una llave para abrirse";
                     activarTexto = true;
                     sonidoFinal.Play();
                 }
@@ -80,7 +81,7 @@ public class InteractiveDoor : MonoBehaviour
                 sonidoFinal = SonidoBloqueada;
                 if (tieneTexto)
                 {
-                    
+                    textoPuerta = "Esta puerta esta bloqueada";
                     activarTexto = true;
                     sonidoFinal.Play();
                 }
@@ -119,7 +120,7 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
+                        textoPuerta = "Está cerrada, tiene un tallado con la forma de la TORRE en ella";
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
@@ -136,7 +137,6 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
@@ -153,7 +153,7 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
+                        textoPuerta = "Está cerrada, tendré que buscar la llave";
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
