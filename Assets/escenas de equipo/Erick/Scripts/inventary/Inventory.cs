@@ -18,7 +18,6 @@ public class Inventory : MonoBehaviour
     public GameObject VolumePause;
     public bool inPause;
     public bool interact;
-    public bool inPuzzle;
 
     public enum ObjectType {bishopDoor, CastleDoor, KingDoor}
     public ObjectType TypeDoor;
@@ -63,7 +62,7 @@ public class Inventory : MonoBehaviour
             _AssetInput.pause = false;
         }
 
-        if (!interact && !inPause && !inPuzzle)
+        if (!interact && !inPause)
         {
             VolumePause.SetActive(false);
             PauseMenu.SetActive(false);
@@ -78,18 +77,13 @@ public class Inventory : MonoBehaviour
             {
                 VolumePause.SetActive(true);
                 PauseMenu.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
                 Time.timeScale = 0;
             }
             if (interact)
             {
                 Cursor.lockState = CursorLockMode.None;
-                VolumePause.SetActive(true);
-                Time.timeScale = 0;
-            }
-            if (inPuzzle)
-            {
-                Cursor.lockState = CursorLockMode.None;
+                //VolumePause.SetActive(true);
+                //Time.timeScale = 0;
             }
         }
 
