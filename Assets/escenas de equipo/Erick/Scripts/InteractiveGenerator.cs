@@ -21,6 +21,9 @@ public class InteractiveGenerator : MonoBehaviour
 
     public bool TimeWait;
     public float Timer;
+
+    public GameObject KeyOn;
+    public GameObject KeyOff;
     public enum ObjetType {GeneratorOn, GeneratorOff}
     public ObjetType lockType;
 
@@ -50,10 +53,14 @@ public class InteractiveGenerator : MonoBehaviour
         if (lockType == ObjetType.GeneratorOn)
         {
             LoopSound.SetActive(true);
+            KeyOn.SetActive(true);
+            KeyOff.SetActive(false);
         }
         else if(lockType == ObjetType.GeneratorOff)
         {
             LoopSound.SetActive(false);
+            KeyOn.SetActive(false);
+            KeyOff.SetActive(true);
         }
     }
     public void Interact()

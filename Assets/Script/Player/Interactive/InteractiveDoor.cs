@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class InteractiveDoor : MonoBehaviour
 {
-    public enum ObjectType { Door, CloseDoor, LockedDoor, TransitionDoor, BishopDoor, CastleDoor, KingDoor, GeneratorRoom}
+    public enum ObjectType { Door, CloseDoor, LockedDoor, TransitionDoor, BishopDoor, CastleDoor, KingDoor, GeneratorRoom, key}
     public ObjectType doorType;
 
     [Header("Controlador de puerta")]
@@ -102,7 +102,7 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
+                        textoPuerta = "Está cerrada, tiene un tallado con la forma del Alfil en ella";
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
@@ -157,6 +157,13 @@ public class InteractiveDoor : MonoBehaviour
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
+                }
+                break;
+            case ObjectType.key:
+                if (tieneTexto)
+                {
+                    textoPuerta = "La llave con forma del Rey del ajedrez, no parece seguro tomarla en estos momentos, debería cortar la electricidad primero";
+                    activarTexto = true;
                 }
                 break;
 
