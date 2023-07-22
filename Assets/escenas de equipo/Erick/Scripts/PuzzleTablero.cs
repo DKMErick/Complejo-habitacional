@@ -10,7 +10,7 @@ public class PuzzleTablero : MonoBehaviour
     private AssetInput _AssetInput;
     public Camera cam;
     public Vector3 mouse;
-    Animator anim;
+    public Animator anim;
     public float elevacion;
 
     public float TimeActive;
@@ -27,7 +27,7 @@ public class PuzzleTablero : MonoBehaviour
     void Start()
     {
         _AssetInput = FindObjectOfType<AssetInput>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInParent<Animator>();
     }
 
     void Update()
@@ -74,7 +74,7 @@ public class PuzzleTablero : MonoBehaviour
 
         if (!Take)
         {
-            SelectObject.transform.position = new Vector3(SelectObject.transform.position.x, SelectObject.transform.position.y, SelectObject.transform.position.z);
+            //SelectObject.transform.position = new Vector3(SelectObject.transform.position.x, SelectObject.transform.position.y, SelectObject.transform.position.z);
 
             SelectObject = null;
             Cursor.visible = true;

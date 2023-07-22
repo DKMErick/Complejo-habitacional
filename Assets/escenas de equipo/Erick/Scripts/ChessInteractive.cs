@@ -59,7 +59,7 @@ public class ChessInteractive : MonoBehaviour
     }
     public void OpenChess()
     {
-        _inventory.interact = true;
+        _inventory.inPuzzle = true;
         camaraChess.SetActive(true);
         flashlightPlayer.FlashlightOn = false;
         CanvasInteractive.SetActive(false);
@@ -71,7 +71,7 @@ public class ChessInteractive : MonoBehaviour
         flashlightPlayer.FlashlightOn = true;
         CanvasInteractive.SetActive(true);
         //Time.timeScale = 1;
-        _inventory.interact = false;
+        _inventory.inPuzzle = false;
     }
 
     public void PuzzleCompletado()
@@ -80,6 +80,6 @@ public class ChessInteractive : MonoBehaviour
         flashlightPlayer.FlashlightOn = true;
         CanvasInteractive.SetActive(false);
         //Time.timeScale = 1;
-        _inventory.interact = false;
+        _inventory.inPuzzle = false;
     }
 }
