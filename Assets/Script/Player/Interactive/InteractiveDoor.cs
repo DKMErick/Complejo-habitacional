@@ -73,7 +73,7 @@ public class InteractiveDoor : MonoBehaviour
                 sonidoFinal = SonidoCerrada;
                 if (tieneTexto)
                 {
-                    
+                    textoPuerta = "Necesito la llave";
                     activarTexto = true;
                     sonidoFinal.Play();
                 }
@@ -83,7 +83,7 @@ public class InteractiveDoor : MonoBehaviour
                 sonidoFinal = SonidoBloqueada;
                 if (tieneTexto)
                 {
-                    
+                    textoPuerta = "Esta bloqueada, es imposible abrirla";
                     activarTexto = true;
                     sonidoFinal.Play();
                 }
@@ -104,7 +104,7 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
+                        textoPuerta = "Esta cerrada, tiene un Alfil tallado";
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
@@ -122,7 +122,7 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
+                        textoPuerta = "Esta cerrada, tiene una Torre tallada";
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
@@ -139,7 +139,7 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
+                        textoPuerta = "Esta cerrada, tiene un Rey tallado";
                         activarTexto = true;
                         sonidoFinal.Play();
                     }
@@ -156,7 +156,7 @@ public class InteractiveDoor : MonoBehaviour
                     sonidoFinal = SonidoCerrada;
                     if (tieneTexto)
                     {
-                        
+                        textoPuerta = "Esta cerrada, necesito la llave";
                         activarTexto = true;
                         sonidoFinal.Play();
                     }

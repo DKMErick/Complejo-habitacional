@@ -6,6 +6,7 @@ using AssetsInputController;
 public class Inventory : MonoBehaviour
 {
     public bool inventoryEnabled;
+    public SceneManager01 KeyManager;
 
     public GameObject inventory;
     private AssetInput _AssetInput;
@@ -25,7 +26,18 @@ public class Inventory : MonoBehaviour
     public Slot slotKey;
     public ComprobacionLlave TakeKey;
 
-
+    private void Awake()
+    {
+        #region Reload
+        KeyManager.LlaveAlfil = false;
+        KeyManager.LlaveGenerador = false;
+        KeyManager.LlaveRey = false;
+        KeyManager.LlaveTorre = false;
+        KeyManager.PiezaAlfil = false;
+        KeyManager.PiezaCaballo = false;
+        KeyManager.PiezaReina = false;
+        #endregion
+    }
 
 
     void Start()
