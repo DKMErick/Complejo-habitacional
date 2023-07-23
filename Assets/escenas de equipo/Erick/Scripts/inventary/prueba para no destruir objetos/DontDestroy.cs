@@ -6,6 +6,7 @@ public class DontDestroy : MonoBehaviour
 {
     private void Awake()
     {
+
         var DontDestroyGameObject = FindObjectsOfType<DontDestroy>();
         if(DontDestroyGameObject.Length > 1)
         {
@@ -16,7 +17,7 @@ public class DontDestroy : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-
+    
     void Update()
     {
         
