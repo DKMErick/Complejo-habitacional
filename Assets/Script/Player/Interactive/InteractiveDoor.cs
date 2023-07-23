@@ -39,6 +39,7 @@ public class InteractiveDoor : MonoBehaviour
     public Animator animationOpen;
     public bool IsDoble;
     public InteractiveDoor secondDoor;
+    public bool PuertaConFigura;
 
     private void Start()
     {
@@ -182,7 +183,7 @@ public class InteractiveDoor : MonoBehaviour
         if (isDoorOpen)
         {
             
-            if(doorType == ObjectType.CastleDoor || doorType == ObjectType.BishopDoor)
+            if(PuertaConFigura)
             {
                 Quaternion targetRotation = Quaternion.Euler(0, doorAngleOpen, 0);
                 transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
@@ -195,7 +196,7 @@ public class InteractiveDoor : MonoBehaviour
         }
         else
         {
-            if(doorType == ObjectType.CastleDoor || doorType == ObjectType.BishopDoor)
+            if(PuertaConFigura)
             {
                 Quaternion targetRotation = Quaternion.Euler(0, doorAngleClosed, 0);
                 transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
