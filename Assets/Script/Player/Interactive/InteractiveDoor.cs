@@ -181,13 +181,31 @@ public class InteractiveDoor : MonoBehaviour
     {
         if (isDoorOpen)
         {
-            Quaternion targetRotation = Quaternion.Euler(0, 0, doorAngleOpen);
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
+            
+            if(doorType == ObjectType.CastleDoor || doorType == ObjectType.BishopDoor)
+            {
+                Quaternion targetRotation = Quaternion.Euler(0, doorAngleOpen, 0);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
+            }
+            else
+            {
+                Quaternion targetRotation = Quaternion.Euler(0, 0, doorAngleOpen);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
+            }
         }
         else
         {
-            Quaternion targetRotation = Quaternion.Euler(0, 0, doorAngleClosed);
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
+            if(doorType == ObjectType.CastleDoor || doorType == ObjectType.BishopDoor)
+            {
+                Quaternion targetRotation = Quaternion.Euler(0, doorAngleClosed, 0);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
+            }
+            else
+            {
+                Quaternion targetRotation = Quaternion.Euler(0, 0, doorAngleClosed);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
+            }
+
         }
     }
     public void ColocarTextoPuerta()
