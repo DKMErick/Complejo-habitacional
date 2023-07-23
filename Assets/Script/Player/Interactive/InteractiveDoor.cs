@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class InteractiveDoor : MonoBehaviour
 {
-    public enum ObjectType { Door, CloseDoor, LockedDoor, TransitionDoor, BishopDoor, CastleDoor, KingDoor, GeneratorRoom}
+    public enum ObjectType { Door, CloseDoor, LockedDoor, TransitionDoor, BishopDoor, CastleDoor, KingDoor, GeneratorRoom, FinalDoor}
     public ObjectType doorType;
 
     [Header("Controlador de puerta")]
@@ -162,6 +162,23 @@ public class InteractiveDoor : MonoBehaviour
                     }
                 }
                 break;
+            case ObjectType.FinalDoor:
+                if (keyScript.LlaveRey)
+                {
+                    tieneTexto = false;
+                    ChangeScene();
+                }
+                else
+                {
+                    sonidoFinal = SonidoCerrada;
+                    if (tieneTexto)
+                    {
+                        textoPuerta = "Antes de irme debo investigar el lugar";
+                        activarTexto = true;
+                        sonidoFinal.Play();
+                    }
+                }
+                break;
 
             default:
                 break;
@@ -169,7 +186,6 @@ public class InteractiveDoor : MonoBehaviour
     }
     public void ChangeScene()
     {
-        //LevelLoader.nextLevel = nombreDeEscena;
         SceneManager.LoadScene(nombreDeEscena);
         
     }

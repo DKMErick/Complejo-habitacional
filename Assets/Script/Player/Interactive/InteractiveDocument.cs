@@ -67,7 +67,6 @@ public class InteractiveDocument : MonoBehaviour
     }
     public void OpenPhoto()
     {
-        Cursor.lockState = CursorLockMode.None;
         point.SetActive(false);
         panelFoto.SetActive(true);
         imagenPhotoCanvas.sprite = renderPhoto;
@@ -76,14 +75,12 @@ public class InteractiveDocument : MonoBehaviour
     }
     public void CerrarCanvasInfo()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         point.SetActive(true);
         panelInfo.SetActive(false);
         _inventory.interact = false;
     }
     public void CerrarCanvasPhoto()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         point.SetActive(true);
         panelFoto.SetActive(false);
         _inventory.interact = false;

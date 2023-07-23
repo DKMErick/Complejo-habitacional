@@ -24,6 +24,7 @@ public class InteractiveGenerator : MonoBehaviour
 
     public GameObject KeyOn;
     public GameObject KeyOff;
+    public GameObject SoundOffTheme;
     public enum ObjetType {GeneratorOn, GeneratorOff}
     public ObjetType lockType;
 
@@ -55,12 +56,14 @@ public class InteractiveGenerator : MonoBehaviour
             LoopSound.SetActive(true);
             KeyOn.SetActive(true);
             KeyOff.SetActive(false);
+            SoundOffTheme.SetActive(false);
         }
         else if(lockType == ObjetType.GeneratorOff)
         {
             LoopSound.SetActive(false);
             KeyOn.SetActive(false);
             KeyOff.SetActive(true);
+            SoundOffTheme.SetActive(true);
         }
     }
     public void Interact()
@@ -98,5 +101,13 @@ public class InteractiveGenerator : MonoBehaviour
         LightSceneOn.SetActive(true);
         LightSceneOff.SetActive(false);
         lockType = ObjetType.GeneratorOn;
+    }
+
+    public void Entry()
+    {
+        if(lockType == ObjetType.GeneratorOn)
+        {
+            Loop.Play();
+        }
     }
 }

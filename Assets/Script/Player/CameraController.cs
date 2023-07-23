@@ -16,7 +16,6 @@ public class CameraController : MonoBehaviour
     private void Awake()
     {
         player = transform.parent;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnLook(InputValue value)

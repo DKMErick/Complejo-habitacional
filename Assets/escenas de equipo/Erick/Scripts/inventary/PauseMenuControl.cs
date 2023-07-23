@@ -26,6 +26,5 @@ public class PauseMenuControl : MonoBehaviour
     {
         InventoryPanel.SetActive(false);
         inventory.inPause = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 }

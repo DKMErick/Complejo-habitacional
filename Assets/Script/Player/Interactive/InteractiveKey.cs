@@ -5,7 +5,8 @@ using UnityEngine;
 public class InteractiveKey : MonoBehaviour
 {
     GameObject point;
-    [SerializeField] GameObject panelLock = null;   
+    [SerializeField] GameObject panelLock = null;
+    Inventory _inventory;
     
     public enum ObjetType { CodeLock,  }
     public ObjetType lockType;
@@ -18,6 +19,7 @@ public class InteractiveKey : MonoBehaviour
     {
         point = GameObject.Find("Point");
         panelLock = AsignarComponentes.instance.panelLock;
+        _inventory = FindObjectOfType<Inventory>();
     }
     public void Interact()
     {
@@ -33,23 +35,21 @@ public class InteractiveKey : MonoBehaviour
     }
     public void Openlock()
     {
-        Cursor.lockState = CursorLockMode.None;
         point.SetActive(false);
         panelLock.SetActive(true);
         camaraCandado.SetActive(true);
-        Time.timeScale = 0;
+        _inventory.InBox = true;
     }
     public void CerrarCanvasPuzzle()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         point.SetActive(true);
         panelLock.SetActive(false);
         camaraCandado.SetActive(false);
-        Time.timeScale = 1;
+        _inventory.InBox = false;
     }
 
     public void CorrectKey()
     {
-        Time.timeScale = 1;
+        _inventory.InBox = false;
     }
 }
