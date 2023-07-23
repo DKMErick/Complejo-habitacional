@@ -36,13 +36,15 @@ public class InteractiveDoor : MonoBehaviour
     [Header("Puertas con Llaves de Formas")]
     public bool abrir;
     public SceneManager01 keyScript;
-    public GameObject animationOpen;
+    public Animator animationOpen;
+    public bool IsDoble;
+    public InteractiveDoor secondDoor;
 
     private void Start()
     {
         tmpPuerta = AsignarComponentes.instance.textoPuerta.GetComponent<TMP_Text>();
         tmpPuertaGO = AsignarComponentes.instance.textoPuerta;
-        
+        animationOpen = GetComponent<Animator>();
     }
     public void Interact()
     {
@@ -93,7 +95,7 @@ public class InteractiveDoor : MonoBehaviour
             case ObjectType.BishopDoor:
                 if (keyScript.LlaveAlfil)
                 {
-                    animationOpen.SetActive(true);
+                    animationOpen.SetBool("IsOpen", true);
                     tieneTexto = false;
                 }
                 else
@@ -111,7 +113,7 @@ public class InteractiveDoor : MonoBehaviour
             case ObjectType.CastleDoor:
                 if (keyScript.LlaveTorre)
                 {
-                    animationOpen.SetActive(true);
+                    animationOpen.SetBool("IsOpen", true);
                     tieneTexto = false;
                 }
                 else
@@ -128,7 +130,7 @@ public class InteractiveDoor : MonoBehaviour
             case ObjectType.KingDoor:
                 if (keyScript.LlaveRey)
                 {
-                    animationOpen.SetActive(true);
+                    animationOpen.SetBool("IsOpen", true);
                     tieneTexto = false;
                 }
                 else
@@ -145,7 +147,7 @@ public class InteractiveDoor : MonoBehaviour
             case ObjectType.GeneratorRoom:
                 if (keyScript.LlaveGenerador)
                 {
-                    animationOpen.SetActive(true);
+                    animationOpen.SetBool("IsOpen", true);
                     tieneTexto = false;
                 }
                 else
@@ -207,7 +209,10 @@ public class InteractiveDoor : MonoBehaviour
     public void ChangeType()
     {
         doorType = ObjectType.Door;
-        animationOpen.SetActive(false);
+        if (IsDoble)
+        {
+            secondDoor.ChangeType();
+        }
     }
 
 }

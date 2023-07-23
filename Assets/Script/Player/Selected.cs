@@ -76,6 +76,17 @@ public class Selected : MonoBehaviour
                     _assetInput.interactuar = false;
                 }
             }
+            if (hit.collider.tag == "Paint")
+            {
+                click = hit.transform.GetComponent<Asignar>().click;
+                click.SetActive(true);
+
+                if (_assetInput.interactuar)
+                {
+                    hit.transform.GetComponent<InteractivePaint>().Interact();
+                    _assetInput.interactuar = false;
+                }
+            }
         }
         else
         {
