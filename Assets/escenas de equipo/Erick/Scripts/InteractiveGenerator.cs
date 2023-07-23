@@ -25,6 +25,8 @@ public class InteractiveGenerator : MonoBehaviour
     public GameObject KeyOn;
     public GameObject KeyOff;
     public GameObject SoundOffTheme;
+    public GameObject ScreamersLucesApagadas;
+    public GameObject ScreamersLucesEncendidas;
     public enum ObjetType {GeneratorOn, GeneratorOff}
     public ObjetType lockType;
 
@@ -57,6 +59,8 @@ public class InteractiveGenerator : MonoBehaviour
             KeyOn.SetActive(true);
             KeyOff.SetActive(false);
             SoundOffTheme.SetActive(false);
+            ScreamersLucesApagadas.SetActive(false);
+            ScreamersLucesEncendidas.SetActive(true);
         }
         else if(lockType == ObjetType.GeneratorOff)
         {
@@ -64,6 +68,8 @@ public class InteractiveGenerator : MonoBehaviour
             KeyOn.SetActive(false);
             KeyOff.SetActive(true);
             SoundOffTheme.SetActive(true);
+            ScreamersLucesApagadas.SetActive(true);
+            ScreamersLucesEncendidas.SetActive(false);
         }
     }
     public void Interact()

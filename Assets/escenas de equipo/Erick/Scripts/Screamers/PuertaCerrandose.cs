@@ -10,11 +10,12 @@ public class PuertaCerrandose : MonoBehaviour
     public bool ActivadorCollider;
 
     public bool door;
-    public bool isSound;
+    public bool Inicio;
 
     public GameObject ScreamerSound;
     public GameObject ColliderScreamer;
     public GameObject ColliderActivador;
+    public GameObject TemaInicial;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -34,6 +35,10 @@ public class PuertaCerrandose : MonoBehaviour
                     _door.sonidoFinal.Play();
                     _door.AbrirPuerta();
                 }
+            }
+            if (Inicio)
+            {
+                TemaInicial.SetActive(true);
             }
 
             Destroy(this, 2f);
