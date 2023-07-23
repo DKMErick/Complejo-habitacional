@@ -30356,7 +30356,7 @@ PrefabInstance:
     - target: {fileID: 9214232098357907298, guid: add4701242292ca479f48816df28fa4e,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9214232098357907298, guid: add4701242292ca479f48816df28fa4e,
         type: 3}
@@ -30436,7 +30436,7 @@ PrefabInstance:
     - target: {fileID: 9214232098453530793, guid: add4701242292ca479f48816df28fa4e,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9214232098453530793, guid: add4701242292ca479f48816df28fa4e,
         type: 3}
@@ -30456,7 +30456,7 @@ PrefabInstance:
     - target: {fileID: 9214232098651507772, guid: add4701242292ca479f48816df28fa4e,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9214232098651507772, guid: add4701242292ca479f48816df28fa4e,
         type: 3}
@@ -30546,7 +30546,7 @@ PrefabInstance:
     - target: {fileID: 9214232099371546953, guid: add4701242292ca479f48816df28fa4e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4514449535908161575, guid: add4701242292ca479f48816df28fa4e, type: 3}
