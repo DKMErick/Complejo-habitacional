@@ -86,7 +86,7 @@ public class Inventory : MonoBehaviour
         else
         {
             Cursor.visible = true;
-            //Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None;
             if (inPause)
             {
                 VolumePause.SetActive(true);
