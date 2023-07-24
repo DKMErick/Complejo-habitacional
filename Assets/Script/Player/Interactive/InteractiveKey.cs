@@ -38,7 +38,7 @@ public class InteractiveKey : MonoBehaviour
         point.SetActive(false);
         panelLock.SetActive(true);
         camaraCandado.SetActive(true);
-        _inventory.InBox = true;
+        _inventory.inPuzzle = true;
     }
     public void CerrarCanvasPuzzle()
     {
