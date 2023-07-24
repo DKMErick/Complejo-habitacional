@@ -87,29 +87,25 @@ public class Inventory : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+
             if (inPause)
             {
                 VolumePause.SetActive(true);
                 PauseMenu.SetActive(true);
                 Time.timeScale = 0;
             }
-            if (interact)
+            else if (interact)
             {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
                 VolumePause.SetActive(true);
                 Time.timeScale = 0;
             }
-            if (inPuzzle)
+            else if (inPuzzle)
             {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+
             }
-            if (InBox)
+            else if (InBox)
             {
                 Time.timeScale = 0;
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
             }
         }
 
