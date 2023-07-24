@@ -77,12 +77,12 @@ public class InteractiveDocument : MonoBehaviour
     {
         point.SetActive(true);
         panelInfo.SetActive(false);
-        _inventory.interact = false;
+        _inventory.CerrarDoc();
     }
     public void CerrarCanvasPhoto()
     {
         point.SetActive(true);
         panelFoto.SetActive(false);
-        _inventory.interact = false;
+        _inventory.CerrarDoc();
     }
 }
