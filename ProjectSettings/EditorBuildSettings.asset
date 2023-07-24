@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenas de juego/Complejo habitacional.unity
     guid: 94edca8db2b3a74449fc7148d0e2b0bc
+  - enabled: 1
+    path: Assets/Scenes/Gracias.unity
+    guid: c5d4fb8aa2291fe48adb9907de31bdd8
   m_configObjects: {}

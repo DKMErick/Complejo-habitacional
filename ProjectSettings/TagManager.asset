@@ -11,6 +11,10 @@ TagManager:
   - Drag
   - Interactivo
   - VolumePause
+  - Paint
+  - InteractiveDocument
+  - Generador
+  - Point
   layers:
   - Default
   - TransparentFX
@@ -18,7 +22,7 @@ TagManager:
   - Raycast Detect
   - Water
   - UI
-  - 
+  - Point
   - 
   - 
   - 

@@ -8,6 +8,7 @@ public class ChangeFlashlight : MonoBehaviour
     FPSController _fpsController;
     public GameObject LightStrong;
     public GameObject LightSlow;
+    public LayerMask mask;
     public bool ChangeLight;
 
     private void Start()
@@ -16,7 +17,8 @@ public class ChangeFlashlight : MonoBehaviour
     }
     void Update()
     {
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), distance))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance, mask))
         {
             Debug.Log("Ha chocado");
             ChangeLight = true;
@@ -43,4 +45,5 @@ public class ChangeFlashlight : MonoBehaviour
             }
         }
     }
+
 }
