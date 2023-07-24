@@ -93,7 +93,6 @@ public class Controlador_candado : MonoBehaviour
 
         if (candadoAbierto)
         {
-            KeyControl.CorrectKey();
             anim.SetBool("open", true);
         }
         else
