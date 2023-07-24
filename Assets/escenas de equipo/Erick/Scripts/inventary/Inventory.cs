@@ -96,17 +96,20 @@ public class Inventory : MonoBehaviour
             if (interact)
             {
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 VolumePause.SetActive(true);
                 Time.timeScale = 0;
             }
             if (inPuzzle)
             {
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             if (InBox)
             {
                 Time.timeScale = 0;
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
 
