@@ -13732,6 +13732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee01e39285233fa48891568dae5ba6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escena: Pantalla de Carga
 --- !u!95 &2085369034
 Animator:
   serializedVersion: 5

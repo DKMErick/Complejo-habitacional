@@ -665,6 +665,7 @@ GameObject:
   - component: {fileID: 1357409416}
   - component: {fileID: 1357409415}
   - component: {fileID: 1357409414}
+  - component: {fileID: 1357409419}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -779,6 +780,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1357409419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357409413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5076b808ae7eea84581cb45b3d59d6d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mensajes:
+  - "Colonia dignidad fue fundada en el a\xF1o 1961 por el Predicador Aleman Paul
+    Sch\xE4fer en la comuna de Parral, Regi\xF3n del Maule, Chile."
+  - "Paul Sch\xE4fer trabajaba como asistente social de menores para una iglesia
+    evang\xE9lica en Alemania."
+  - "En Colonia Dignidad no se permit\xEDan casamientos, ni el tener hijos."
+  - "Paul Sch\xE4fer lleg\xF3 a Chile escapando de la justicia Alemanas por denuncias
+    de abuso sexual de menores.\r\n"
+  - "Semanas despu\xE9s del golpe de estado, Sch\xE4fer orden\xF3 a unos colonos
+    que acondicionaran el s\xF3tano del granero. Lugar que se convertir\xEDa en un
+    centro de detenci\xF3n y tortura a cargo de la DINA.\r\n"
+  - "Paul Sch\xE4fer fue condenado a 33 a\xF1os y 1 d\xEDa por sus cr\xEDmenes, solo
+    cumpli\xF3 5 de estos antes de morir."
+  - "Cada detenido ten\xEDa una obra musical cl\xE1sica asignada, esto alertaba a
+    los detenidos sobre quien ser\xEDa interrogado y torturado.\r\n"
+  - "Paul Sch\xE4fer fue detenido en Argentina y expulsado de ese pa\xEDs en el 2005.
+    \r\n"
+  - "Colonia Dignidad tambi\xE9n fue uno de los lugares que el Ej\xE9rcito us\xF3
+    para la producci\xF3n de GAS SAR\xCDN."
+  - "El ex presidente Jorge Alessandri impuls\xF3 a causa del terremoto de 1960,
+    la instalaci\xF3n de sociedades de beneficencia, medida que aprovech\xF3 Paul
+    Sch\xE4fer para crear Colonia Dignidad.\r\n"
+  - "Se cree que con el gas sar\xEDn producido en Colonia Dignidad pudo haber sido
+    asesinado el expresidente Eduardo Frei Montalva en 1982. \r\n"
+  - "Paul Sch\xE4fer construy\xF3 un Estado aut\xF3nomo dentro del Estado chileno.\r\n"
+  - "Norbert Bl\xFCm, ministro de Trabajo de Alemania le dijo a Pinochet \u201CEsta
+    colonia es una granja modelo de desaparici\xF3n de seres humanos\u201D en 1987.\r"
+  - "Paul Sch\xE4fer estableci\xF3 un sistema vertical en el todos deb\xEDan confesarse
+    con \xE9l.\r"
+  - "La Colonia pas\xF3 a llamarse Villa Baviera una vez que intervino el Estado
+    chileno en 2005. Algunos colonos. regresaron a Alemania."
+  - "Paul Sch\xE4fer se dedic\xF3 al lavado de cerebros. Separ\xF3 a hombres, mujeres
+    y ni\xF1os en tres grupos casi sin contacto entre s\xED.\r\n."
+  - "Paul Sch\xE4fer se rodeaba de chicos, los llamados \u201Csprinters\u201D, j\xF3venes
+    elegidos por Sch\xE4fer, ellos pasaban los d\xEDas y noches con este abusador.\r\n."
+  - "Paul Sch\xE4fer muri\xF3 el 24 de abril de 2010. Nunca afront\xF3 un proceso
+    por las violaciones a los derechos humanos cometidas en la dictadura de Pinochet.\r\n"
+  numeroMensaje: 0
+  Texto: {fileID: 1936264832}
+  escena: Complejo habitacional
 --- !u!1 &1478091872
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +895,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.75
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

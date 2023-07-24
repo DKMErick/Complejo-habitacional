@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class CarcarEscena : MonoBehaviour
 {
+    public string escena;
+
     public void CargarPantalla()
     {
-        SceneManager.LoadScene("Pantalla de Carga");
+        SceneManager.LoadScene(escena);
     }
 }
