@@ -79,6 +79,6 @@ public class ChessInteractive : MonoBehaviour
         flashlightPlayer.FlashlightOn = true;
         CanvasInteractive.SetActive(false);
         //Time.timeScale = 1;
-        _inventory.interact = false;
+        _inventory.CerrarDoc();
     }
 }
