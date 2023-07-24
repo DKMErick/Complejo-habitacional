@@ -78,28 +78,21 @@ public class Inventory : MonoBehaviour
 
         if (inPause)
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
             VolumePause.SetActive(true);
             PauseMenu.SetActive(true);
             Time.timeScale = 0;
         }
         else if (interact)
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
             VolumePause.SetActive(true);
             Time.timeScale = 0;
         }
         else if (inPuzzle)
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+
         }
         else if (InBox)
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
         }
 
@@ -107,7 +100,6 @@ public class Inventory : MonoBehaviour
         {
             VolumePause.SetActive(false);
             PauseMenu.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
         }
 
@@ -176,7 +168,6 @@ public class Inventory : MonoBehaviour
     {
         VolumePause.SetActive(false);
         PauseMenu.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         interact = false;
         inPuzzle = false;
