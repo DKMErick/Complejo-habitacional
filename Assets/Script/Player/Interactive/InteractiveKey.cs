@@ -50,6 +50,6 @@ public class InteractiveKey : MonoBehaviour
 
     public void CorrectKey()
     {
-        _inventory.InBox = false;
+        _inventory.CerrarDoc();
     }
 }
