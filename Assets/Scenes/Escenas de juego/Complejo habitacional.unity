@@ -11924,6 +11924,11 @@ PrefabInstance:
       propertyPath: flashlightPlayer
       value: 
       objectReference: {fileID: 281554451}
+    - target: {fileID: 5203463736256090999, guid: 11e5d945dca31054d87effb45bf600c1,
+        type: 3}
+      propertyPath: ImageItem
+      value: 
+      objectReference: {fileID: 2800000, guid: 8612f55b30c7ef744ac0628693ab0550, type: 3}
     - target: {fileID: 5253153094951315370, guid: 11e5d945dca31054d87effb45bf600c1,
         type: 3}
       propertyPath: m_RootOrder
