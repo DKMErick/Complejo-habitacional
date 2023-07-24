@@ -72,7 +72,7 @@ public class Inventory : MonoBehaviour
         if (_AssetInput.pause)
         {
             Cursor.lockState = CursorLockMode.None;
-            inPause = true;
+            inPause = !inPause;
             _AssetInput.pause = false;
         }
 
