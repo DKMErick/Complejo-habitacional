@@ -45,7 +45,7 @@ public class InteractiveKey : MonoBehaviour
         point.SetActive(true);
         panelLock.SetActive(false);
         camaraCandado.SetActive(false);
-        _inventory.InBox = false;
+        _inventory.inPuzzle = false;
     }
 
     public void CorrectKey()

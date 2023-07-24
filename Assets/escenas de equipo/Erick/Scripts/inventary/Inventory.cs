@@ -71,9 +71,36 @@ public class Inventory : MonoBehaviour
 
         if (_AssetInput.pause)
         {
-            Cursor.lockState = CursorLockMode.None;
             inPause = !inPause;
+
             _AssetInput.pause = false;
+        }
+
+        if (inPause)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            VolumePause.SetActive(true);
+            PauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else if (interact)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            VolumePause.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else if (inPuzzle)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (InBox)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
 
         if (!interact && !inPause && !inPuzzle && !InBox)
@@ -82,31 +109,6 @@ public class Inventory : MonoBehaviour
             PauseMenu.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
-        }
-        else
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-
-            if (inPause)
-            {
-                VolumePause.SetActive(true);
-                PauseMenu.SetActive(true);
-                Time.timeScale = 0;
-            }
-            else if (interact)
-            {
-                VolumePause.SetActive(true);
-                Time.timeScale = 0;
-            }
-            else if (inPuzzle)
-            {
-
-            }
-            else if (InBox)
-            {
-                Time.timeScale = 0;
-            }
         }
 
         if (inventoryEnabled)
