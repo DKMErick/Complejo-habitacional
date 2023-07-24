@@ -7,6 +7,8 @@ public class PauseMenuControl : MonoBehaviour
 {
     public Inventory inventory;
     public GameObject InventoryPanel;
+    public ChessInteractive _chess;
+    public InteractiveKey _candado;
     void Start()
     {
         inventory = FindObjectOfType<Inventory>();
@@ -25,6 +27,10 @@ public class PauseMenuControl : MonoBehaviour
     public void CerrarMenu()
     {
         InventoryPanel.SetActive(false);
+        _chess.CerrarCanvasPuzzle();
+        _candado.CerrarCanvasPuzzle();
         inventory.inPause = false;
+
+        
     }
 }

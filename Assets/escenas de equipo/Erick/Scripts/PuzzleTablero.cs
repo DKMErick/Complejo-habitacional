@@ -12,6 +12,7 @@ public class PuzzleTablero : MonoBehaviour
     public Vector3 mouse;
     public Animator anim;
     public float elevacion;
+    public LayerMask mask;
 
     public float TimeActive;
     public float FinalTime = 1f;
@@ -96,7 +97,7 @@ public class PuzzleTablero : MonoBehaviour
 
 
         RaycastHit hit;
-        Physics.Raycast(worldMousePosNear, worldMousePosFar - worldMousePosNear, out hit, distance);
+        Physics.Raycast(worldMousePosNear, worldMousePosFar - worldMousePosNear, out hit, distance, mask);
         Debug.DrawRay(worldMousePosNear, worldMousePosFar - worldMousePosNear, Color.red);
 
         return hit;
